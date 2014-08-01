@@ -1,7 +1,8 @@
 #!/bin/bash
 
 dir=`pwd`
-files=".bashrc .vimrc .ctags .gitconfig"    # list of files/folders to symlink in homedir
+# list of files/folders to symlink in homedir
+files=".bashrc .vimrc .ctags .gitconfig .tmux.conf"
 
 # change to the dotfiles directory
 cd ~
