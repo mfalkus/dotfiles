@@ -1,6 +1,5 @@
 [user]
     name = Martin Falkus
-    email = martin@falkus.co
 [diff]
     tool = vimdiff
 [color]
