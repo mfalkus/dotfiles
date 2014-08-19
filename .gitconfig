@@ -1,6 +1,5 @@
 [user]
     name = Martin Falkus
-	email = mf@netcraft.com
 [diff]
     tool = vimdiff
 [color]
@@ -8,6 +7,6 @@
 [help]
     autocorrect = 1
 [core]
-    excludesfile = /home/falkus/.gitignore_everywhere
+    excludesfile = ~/.gitignore_everywhere
 [branch]
 	autosetuprebase = always
