@@ -56,3 +56,6 @@ let tlist_scss_settings = 'scss;c:class;i:id;t:tag;m:media;v:variable;m:mixin'
 
 " Shortcut for sudo saving when we forget to launch vim as sudo
 cmap w!! w !sudo tee > /dev/null %
+
+" Highlight current tab in a clearer way
+hi TabLineSel ctermfg=Black ctermbg=Grey
