@@ -1,0 +1,13 @@
+defscrollback 30000
+autodetach on
+
+# Don't display the copyright page
+startup_message off
+
+# tab-completion flash in heading bar
+vbell off
+
+# Give a window list at the bottom of the screen, with the time and date and
+# with the current window highlighted
+hardstatus alwayslastline                                                                                                                    
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
