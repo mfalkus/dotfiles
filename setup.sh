@@ -3,7 +3,7 @@
 dir=`pwd`
 # list of files/folders to symlink in homedir
 # note, don't copy .gitconfig by default
-files=".bashrc .screenrc .vimrc .ctags .tmux.conf"
+files=".bashrc .screenrc .vimrc .ctags .tmux.conf .gitignore_everywhere"
 cp_files=".gitconfig"
 
 # change to the dotfiles directory
