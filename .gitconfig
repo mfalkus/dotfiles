@@ -10,3 +10,8 @@
     excludesfile = ~/.gitignore_everywhere
 [branch]
 	autosetuprebase = always
+[alias]
+    co = checkout
+    br = branch
+    ci = commit
+    st = status
