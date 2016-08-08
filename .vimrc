@@ -59,3 +59,7 @@ cmap w!! w !sudo tee > /dev/null %
 
 " Highlight current tab in a clearer way
 hi TabLineSel ctermfg=Black ctermbg=Grey
+
+" Enable matchit for xml tag matching
+filetype plugin on
+runtime macros/matchit.vim
