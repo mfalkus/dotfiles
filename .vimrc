@@ -63,3 +63,6 @@ hi TabLineSel ctermfg=Black ctermbg=Grey
 " Enable matchit for xml tag matching
 filetype plugin on
 runtime macros/matchit.vim
+
+" Look for tags file in current dir upwards
+set tags=./tags,tags;
