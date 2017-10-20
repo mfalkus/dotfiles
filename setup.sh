@@ -10,8 +10,9 @@ cp_files=".gitconfig"
 cd ~
 
 for file in $files; do
-    echo "Unlinking $file"
-    unlink ~/$file
+    if [ -e ~/$file ]; then
+        unlink ~/$file && echo "Unlinked $file"
+    fi
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/$file
 done
