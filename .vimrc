@@ -1,3 +1,6 @@
+" pathogen so we can use subdirectories for plugins
+execute pathogen#infect()
+
 " not interested in vi compatibility
 set nocompatible
 
@@ -43,7 +46,7 @@ map #3 :TlistToggle<CR>
 set scrolloff=4
 
 " visually show trailing space
-" set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:>-,trail:·
 
 " add scss filetype support
 au BufRead,BufNewFile *.scss set ft=scss.css
@@ -53,6 +56,10 @@ au BufRead,BufNewFile *.scss set ft=scss.css
 let tlist_css_settings = 'css;c:class;i:id;t:tag;m:media'
 " scss
 let tlist_scss_settings = 'scss;c:class;i:id;t:tag;m:media;v:variable;m:mixin'
+
+" Relative numbers
+set relativenumber
+" set number
 
 " Shortcut for sudo saving when we forget to launch vim as sudo
 cmap w!! w !sudo tee > /dev/null %
@@ -66,3 +73,31 @@ runtime macros/matchit.vim
 
 " Look for tags file in current dir upwards
 set tags=./tags,tags;
+
+"
+" Stuff for latex...
+"
+filetype plugin on
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" automatic indentation as you type.
+filetype indent on
+
+" Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" Change the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
+autocmd BufRead *.tex,*.md set textwidth=80
+autocmd BufRead *.tex,*.md set spell
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
+" Try use language tool
+" let g:languagetool_jar='$HOME/LanguageTool-2.5/languagetool-commandline.jar'
+
+runtime macros/matchit.vim
