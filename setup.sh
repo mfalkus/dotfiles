@@ -18,6 +18,13 @@ for file in $files; do
 done
 
 for file in $cp_files; do
-    echo "Copying $file (+ making backup if required)"
-    cp -b $dir/$file ~/$file
+    echo "Copying $file"
+    if [ -f ~/$file ];
+        then
+            CUR_TIME=$(date +'%s') && \
+            NEW_FILE=$file".previous-"$CUR_TIME && \
+            cp ~/$file ~/$NEW_FILE && \
+            echo "Current .gitconfig copied to $NEW_FILE";
+    fi
+    cp $dir/$file ~/$file
 done
