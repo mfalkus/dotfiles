@@ -1,5 +1,5 @@
 " pathogen so we can use subdirectories for plugins
-execute pathogen#infect()
+" execute pathogen#infect()
 
 " not interested in vi compatibility
 set nocompatible
@@ -58,8 +58,8 @@ let tlist_css_settings = 'css;c:class;i:id;t:tag;m:media'
 let tlist_scss_settings = 'scss;c:class;i:id;t:tag;m:media;v:variable;m:mixin'
 
 " Relative numbers
-set relativenumber
-" set number
+" set relativenumber
+set number
 
 " Shortcut for sudo saving when we forget to launch vim as sudo
 cmap w!! w !sudo tee > /dev/null %
