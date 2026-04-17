@@ -1,5 +1,12 @@
-" pathogen so we can use subdirectories for plugins
-" execute pathogen#infect()
+" --- Plugin Setup Time ---
+call plug#begin('~/.vim/plugged')
+
+" The GPG plugin
+Plug 'jamessan/vim-gnupg'
+
+call plug#end()
+" --- End Plugins ---
+
 
 " not interested in vi compatibility
 set nocompatible
@@ -101,3 +108,4 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " let g:languagetool_jar='$HOME/LanguageTool-2.5/languagetool-commandline.jar'
 
 runtime macros/matchit.vim
+set re=0
