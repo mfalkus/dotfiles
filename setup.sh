@@ -18,7 +18,7 @@ for file in $files; do
         rm ~/$file && echo "Removed existing $file"
     fi
     echo "Creating symlink to $file in home directory."
-    ln -s "$dir/$file" "$home/$file"
+    ln -s "$dir/$file" "$HOME/$file"
 done
 
 # 4. Handle .gitconfig copies
