@@ -4,6 +4,9 @@ call plug#begin('~/.vim/plugged')
 " The GPG plugin
 Plug 'jamessan/vim-gnupg'
 
+" Laravel Blade template syntax highlighting
+Plug 'jwalton512/vim-blade'
+
 call plug#end()
 " --- End Plugins ---
 
